@@ -10,10 +10,13 @@ const FILTER_TITLES = {
 }
 
 const Footer = (props) => {
+  debugger
   const { activeCount, completedCount, onClearCompleted } = props
+  console.log('completedCount:',completedCount);
   const itemWord = activeCount === 1 ? 'item' : 'items'
   return (
     <footer className="footer">
+    completedCunt:{completedCount}
       <span className="todo-count">
         <strong>{activeCount || 'No'}</strong> {itemWord} left
       </span>
@@ -39,7 +42,7 @@ const Footer = (props) => {
 }
 
 Footer.propTypes = {
-  completedCount: PropTypes.number.isRequired,
+ 
   activeCount: PropTypes.number.isRequired,
   onClearCompleted: PropTypes.func.isRequired,
 }
